@@ -4,6 +4,11 @@
   <title>Settings</title>
   <style>
     body { width: 200px; }
+    .slider-container, .dropdown-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
@@ -11,7 +16,20 @@
   <label for="message">Message:</label>
   <input type="text" id="message"><br><br>
   <button id="save">Save</button><br><br>
-  <button id="toggle-bar">Toggle Bar</button>
+  <button id="toggle-bar">Toggle Bar</button><br><br>
+  <div class="slider-container">
+    <label for="height-slider">Height:</label>
+    <input type="range" id="height-slider" min="50" max="200" step="10">
+  </div><br>
+  <div class="dropdown-container">
+    <label for="position-dropdown">Position:</label>
+    <select id="position-dropdown">
+      <option value="bottom">Bottom</option>
+      <option value="top">Top</option>
+      <option value="left">Left</option>
+      <option value="right">Right</option>
+    </select>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
